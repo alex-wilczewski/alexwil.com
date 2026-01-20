@@ -27,7 +27,7 @@ export default function Home() {
   }, [isSticky]);
 
   return (
-    <main className="min-h-screen bg-[#fafaf8]">
+    <main className="min-h-screen bg-[#fafaf8] overflow-x-hidden">
       {/* Hero/Profile Section */}
       <section className="flex flex-col items-center w-full max-w-3xl mx-auto my-16 hero-section-responsive">
         <div className="flex flex-row items-center justify-center gap-8 w-full hero-inner-responsive">
@@ -69,9 +69,9 @@ export default function Home() {
         ))}
       </div>
 
-      {/* Main Grid Container - fixed width, centered, horizontal scroll on small screens */}
-      <div className="w-full overflow-x-auto">
-        <div className="w-[1160px] mx-auto px-0">
+      {/* Main Grid Container - fixed width on desktop, fluid on mobile/tablet, no horizontal scroll */}
+      <div>
+        <div className="w-full max-w-[1160px] mx-auto px-4">
         
         {/* ==================== ABOUT ME SECTION ==================== */}
         <section id="about-me" className="py-8" style={{ scrollMarginTop: '80px' }}>

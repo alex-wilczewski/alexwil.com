@@ -66,7 +66,7 @@ export default function RootLayout({
           {children}
         </main>
         {/* Footer */}
-        <footer className="w-full border-t border-neutral-200 mt-16 py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto gap-8 text-sm">
+        <footer className="w-full border-t border-neutral-200 mt-16 py-12 px-8 flex flex-row justify-between items-center max-w-6xl mx-auto gap-8 text-sm">
             <div className="flex items-center gap-2 select-none mb-4 md:mb-0">
               <a href="https://alexwil.com" aria-label="Home">
                 <Image src="/assets/logo-black.svg" alt="Alex Wilczewski Logo" width={180} height={60} className="h-14 w-auto" />

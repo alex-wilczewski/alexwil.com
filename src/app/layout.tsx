@@ -22,9 +22,11 @@ export default function RootLayout({
       <body className="bg-[#fafaf8] text-neutral-900 min-h-screen flex flex-col">
         {/* Header */}
         <header className="w-full flex justify-between items-center px-8 py-6 max-w-6xl mx-auto">
-          <div className="flex items-center gap-2 select-none">
-            <Image src="/assets/personal-brand-mark.svg" alt="Alex Wilczewski Logo" width={180} height={60} className="h-14 w-auto" priority />
-          </div>
+            <div className="flex items-center gap-2 select-none">
+              <a href="https://alexwil.com" aria-label="Home">
+                <Image src="/assets/logo-black.svg" alt="Alex Wilczewski Logo" width={180} height={60} className="h-14 w-auto" priority />
+              </a>
+            </div>
           {/* Let's chat button triggers modal */}
           <button
             id="lets-chat-btn"
@@ -65,9 +67,11 @@ export default function RootLayout({
         </main>
         {/* Footer */}
         <footer className="w-full border-t border-neutral-200 mt-16 py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto gap-8 text-sm">
-          <div className="flex items-center gap-2 select-none mb-4 md:mb-0">
-            <Image src="/assets/personal-brand-mark.svg" alt="Alex Wilczewski Logo" width={180} height={60} className="h-14 w-auto" />
-          </div>
+            <div className="flex items-center gap-2 select-none mb-4 md:mb-0">
+              <a href="https://alexwil.com" aria-label="Home">
+                <Image src="/assets/logo-black.svg" alt="Alex Wilczewski Logo" width={180} height={60} className="h-14 w-auto" />
+              </a>
+            </div>
           <div className="flex flex-col gap-1 text-neutral-500 text-left">
             <div className="flex flex-col gap-1 mb-1">
               <a href="https://www.linkedin.com/in/alex-wilczewski/" className="underline flex items-center gap-2" target="_blank" rel="noopener noreferrer">

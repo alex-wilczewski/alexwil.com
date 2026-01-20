@@ -71,7 +71,7 @@ export default function Home() {
 
       {/* Main Grid Container - fixed width, centered */}
       <div className="w-full">
-        <div className="w-[1160px] mx-auto px-0">
+        <div className="max-w-[1160px] w-full mx-auto px-0">
         
         {/* ==================== ABOUT ME SECTION ==================== */}
         <section id="about-me" className="py-8" style={{ scrollMarginTop: '32px' }}>

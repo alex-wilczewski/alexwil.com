@@ -27,7 +27,7 @@ export default function Home() {
   }, [isSticky]);
 
   return (
-    <main className="min-h-screen bg-[#fafaf8] overflow-x-hidden">
+    <main className="min-h-screen bg-[#fafaf8]">
       {/* Hero/Profile Section */}
       <section className="flex flex-col items-center w-full max-w-3xl mx-auto my-16 hero-section-responsive">
         <div className="flex flex-row items-center justify-center gap-8 w-full hero-inner-responsive">
@@ -69,23 +69,53 @@ export default function Home() {
         ))}
       </div>
 
-      {/* Main Grid Container - fixed width on desktop, fluid on mobile/tablet, no horizontal scroll */}
-      <div>
-        <div className="w-full max-w-[1160px] mx-auto px-4">
+      {/* Main Grid Container - fixed width, centered */}
+      <div className="w-full">
+        <div className="w-[1160px] mx-auto px-0">
+        
         {/* ==================== ABOUT ME SECTION ==================== */}
-        <section id="about-me" className="py-8" style={{ scrollMarginTop: '80px' }}>
+        <section id="about-me" className="py-8" style={{ scrollMarginTop: '32px' }}>
           {/* Fixed pixel grid: 10 columns of 107px each + 9 gaps of 10px = 1160px */}
           <div className="about-grid">
+            
             {/* ROW 1 */}
             {/* Folder Card - cols 1-3 (341px), row 1 */}
-            <div className="card-folder relative">
+            <div 
+              className="card-folder relative"
+            >
               {/* Desktop Folder Image */}
-              <img src="/assets/desktop-folder-card.png" alt="About Me Folder Card Desktop" className="folder-desktop" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px', display: 'block' }} />
+              <img 
+                src="/assets/desktop-folder-card.png" 
+                alt="About Me Folder Card Desktop" 
+                className="folder-desktop"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px', display: 'block' }}
+              />
               {/* Tablet Folder Image */}
-              <img src="/assets/tablet-folder-card.png" alt="About Me Folder Card Tablet" className="folder-tablet" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px', display: 'block' }} />
+              <img 
+                src="/assets/tablet-folder-card.png" 
+                alt="About Me Folder Card Tablet" 
+                className="folder-tablet"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px', display: 'block' }}
+              />
               {/* Mobile Folder Image - only render on mobile */}
-              <img src="/assets/mobile-folder-card.png" alt="About Me Folder Card Mobile" className="folder-mobile" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px', display: 'block' }} />
-              <span className="absolute text-sm font-bold px-4 py-2 font-zalando" style={{ backgroundColor: '#E7FE96', color: '#1A1813', borderRadius: '11px', bottom: '12px', right: '12px' }}>About me</span>
+              <img 
+                src="/assets/mobile-folder-card.png" 
+                alt="About Me Folder Card Mobile" 
+                className="folder-mobile"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px', display: 'block' }}
+              />
+              <span 
+                className="absolute text-sm font-bold px-4 py-2 font-zalando"
+                style={{ 
+                  backgroundColor: '#E7FE96',
+                  color: '#1A1813',
+                  borderRadius: '11px',
+                  bottom: '12px',
+                  right: '12px'
+                }}
+              >
+                About me
+              </span>
             </div>
 
             {/* Head of Brand / Current Role - cols 4-5 (224px), row 1 */}

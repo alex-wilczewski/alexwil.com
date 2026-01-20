@@ -19,7 +19,7 @@ export default function RootLayout({
         {/* Google Fonts import removed. Using local fonts only. */}
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </head>
-      <body className="bg-[#fafaf8] text-neutral-900 min-h-screen flex flex-col">
+      <body className="bg-[#fafaf8] text-neutral-900 min-h-screen flex flex-col overflow-x-hidden">
         {/* Header */}
         <header className="w-full flex justify-between items-center px-8 py-6 max-w-6xl mx-auto">
             <div className="flex items-center gap-2 select-none">
@@ -66,24 +66,26 @@ export default function RootLayout({
           {children}
         </main>
         {/* Footer */}
-        <footer className="w-full border-t border-neutral-200 mt-16 py-12 px-8 flex flex-row justify-between items-center max-w-6xl mx-auto gap-8 text-sm">
+        <footer className="w-full mt-4 py-12 px-8 flex flex-row justify-between items-center max-w-6xl mx-auto gap-8 text-sm">
+          <div className="w-full border-t border-neutral-200 max-w-6xl mx-auto flex flex-row justify-between items-center gap-8 pt-8">
             <div className="flex items-center gap-2 select-none mb-4 md:mb-0">
               <a href="https://alexwil.com" aria-label="Home">
                 <Image src="/assets/logo-black.svg" alt="Alex Wilczewski Logo" width={180} height={60} className="h-14 w-auto" />
               </a>
             </div>
-          <div className="flex flex-col gap-1 text-neutral-500 text-left">
-            <div className="flex flex-col gap-1 mb-1">
-              <a href="https://www.linkedin.com/in/alex-wilczewski/" className="underline flex items-center gap-2" target="_blank" rel="noopener noreferrer">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" className="w-4 h-4 text-neutral-500" fill="currentColor"><g><rect className="background" fill="currentColor" x="0" y="0" width="34" height="34" rx="6"/><path d="M8.1 12.7h4.1v13.2H8.1V12.7zm2-6.1c1.3 0 2.1.9 2.1 2.1 0 1.2-.8 2.1-2.1 2.1h-.1c-1.3 0-2.1-.9-2.1-2.1 0-1.2.8-2.1 2.1-2.1zm4.7 6.1h3.9v1.8h.1c.5-.9 1.7-2.1 3.7-2.1 3.9 0 4.6 2.6 4.6 6v7.5h-4.1v-6.7c0-1.6 0-3.7-2.3-3.7-2.3 0-2.7 1.8-2.7 3.6v6.8h-4.1V12.7z" fill="#fff"/></g></svg>
-                LinkedIn ↗
-              </a>
-              <a href="https://github.com/alex-wilczewski" className="underline flex items-center gap-2" target="_blank" rel="noopener noreferrer">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-4 h-4 text-neutral-500"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.262.82-.582 0-.288-.012-1.243-.017-2.252-3.338.726-4.042-1.415-4.042-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.606-2.665-.304-5.466-1.332-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.984-.399 3.003-.404 1.018.005 2.046.138 3.006.404 2.289-1.552 3.295-1.23 3.295-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.804 5.625-5.475 5.921.43.372.823 1.104.823 2.226 0 1.606-.015 2.898-.015 3.293 0 .322.218.699.825.58C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                GitHub ↗
-              </a>
+            <div className="flex flex-col gap-1 text-neutral-500 text-left">
+              <div className="flex flex-col gap-1 mb-1">
+                <a href="https://www.linkedin.com/in/alex-wilczewski/" className="underline flex items-center gap-2" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" className="w-4 h-4 text-neutral-500" fill="currentColor"><g><rect className="background" fill="currentColor" x="0" y="0" width="34" height="34" rx="6"/><path d="M8.1 12.7h4.1v13.2H8.1V12.7zm2-6.1c1.3 0 2.1.9 2.1 2.1 0 1.2-.8 2.1-2.1 2.1h-.1c-1.3 0-2.1-.9-2.1-2.1 0-1.2.8-2.1 2.1-2.1zm4.7 6.1h3.9v1.8h.1c.5-.9 1.7-2.1 3.7-2.1 3.9 0 4.6 2.6 4.6 6v7.5h-4.1v-6.7c0-1.6 0-3.7-2.3-3.7-2.3 0-2.7 1.8-2.7 3.6v6.8h-4.1V12.7z" fill="#fff"/></g></svg>
+                  LinkedIn ↗
+                </a>
+                <a href="https://github.com/alex-wilczewski" className="underline flex items-center gap-2" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-4 h-4 text-neutral-500"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.262.82-.582 0-.288-.012-1.243-.017-2.252-3.338.726-4.042-1.415-4.042-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.606-2.665-.304-5.466-1.332-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.984-.399 3.003-.404 1.018.005 2.046.138 3.006.404 2.289-1.552 3.295-1.23 3.295-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.804 5.625-5.475 5.921.43.372.823 1.104.823 2.226 0 1.606-.015 2.898-.015 3.293 0 .322.218.699.825.58C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub ↗
+                </a>
+              </div>
+              <span style={{ fontSize: '12px', marginTop: '0.5rem', display: 'inline-block' }}>© {new Date().getFullYear()} Alex Wilczewski</span>
             </div>
-            <span style={{ fontSize: '12px', marginTop: '0.5rem', display: 'inline-block' }}>© {new Date().getFullYear()} Alex Wilczewski</span>
           </div>
         </footer>
       </body>

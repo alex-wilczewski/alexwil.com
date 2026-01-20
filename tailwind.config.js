@@ -12,6 +12,11 @@ module.exports = {
         secondary: '#64748b',
         accent: '#3b82f6',
       },
+      fontFamily: {
+        zalando: ['Zalando Sans Expanded', 'sans-serif'],
+        'zalando-semi': ['Zalando Sans Semi Expanded', 'sans-serif'],
+        body: ['Zalando Sans Variable', 'system-ui', 'sans-serif'],
+      },
     },
   },
   plugins: [],

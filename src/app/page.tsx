@@ -1,34 +1,27 @@
 'use client'
 
 
-import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
   const navRef = useRef<HTMLDivElement>(null);
   const [isSticky, setIsSticky] = useState(false);
-  const [justBecameSticky, setJustBecameSticky] = useState(false);
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout | null = null;
     const handleScroll = () => {
       if (!navRef.current) return;
       const { top } = navRef.current.getBoundingClientRect();
       const nowSticky = top <= 24;
       if (nowSticky && !isSticky) {
         setIsSticky(true);
-        setJustBecameSticky(true);
-        timeout = setTimeout(() => setJustBecameSticky(false), 500);
       } else if (!nowSticky && isSticky) {
         setIsSticky(false);
-        setJustBecameSticky(false);
       }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      if (timeout) clearTimeout(timeout);
     };
     // eslint-disable-next-line
   }, [isSticky]);

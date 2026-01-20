@@ -2,7 +2,6 @@
 import type { Metadata } from 'next'
 import '../styles/globals.css'
 import Image from 'next/image'
-import logo from '../assets/logo.svg'
 
 export const metadata: Metadata = {
   title: 'Alex Wilczewski - Portfolio',
@@ -24,7 +23,7 @@ export default function RootLayout({
         {/* Header */}
         <header className="w-full flex justify-between items-center px-8 py-6 max-w-6xl mx-auto">
           <div className="flex items-center gap-2 select-none">
-            <Image src={logo} alt="Alex Wilczewski Logo" width={180} height={60} className="h-14 w-auto" priority />
+            <Image src="/assets/personal-brand-mark.svg" alt="Alex Wilczewski Logo" width={180} height={60} className="h-14 w-auto" priority />
           </div>
           {/* Let's chat button triggers modal */}
           <button
@@ -67,7 +66,7 @@ export default function RootLayout({
         {/* Footer */}
         <footer className="w-full border-t border-neutral-200 mt-16 py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto gap-8 text-sm">
           <div className="flex items-center gap-2 select-none mb-4 md:mb-0">
-            <Image src={logo} alt="Alex Wilczewski Logo" width={180} height={60} className="h-14 w-auto" />
+            <Image src="/assets/personal-brand-mark.svg" alt="Alex Wilczewski Logo" width={180} height={60} className="h-14 w-auto" />
           </div>
           <div className="flex flex-col gap-1 text-neutral-500 text-left">
             <div className="flex flex-col gap-1 mb-1">

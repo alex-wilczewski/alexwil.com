@@ -1,4 +1,4 @@
-# Alex Wilczewski - Portfolio
+# Alex Wilczewski's Portfolio
 
 Personal portfolio website built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
 

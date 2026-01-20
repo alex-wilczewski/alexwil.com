@@ -598,6 +598,7 @@ body {
   grid-template-columns: repeat(10, 107px);
   grid-template-rows: 224px 224px 224px;
   width: 1160px;
+  box-sizing: border-box;
 }
 
 /* Desktop card positions */
@@ -608,8 +609,9 @@ body {
 @media (min-width: 800px) {
   .about-grid {
     width: 1160px;
-    max-width: 1160px;
+    max-width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
   }
 }
 .card-mockup { grid-column: 1 / 3; grid-row: 2 / 4; }

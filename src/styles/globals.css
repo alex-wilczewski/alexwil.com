@@ -1,3 +1,38 @@
+/* Folder Card Responsive Images */
+
+.folder-desktop {
+  display: block !important;
+}
+.folder-tablet {
+  display: none !important;
+}
+.folder-mobile {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  .folder-desktop {
+    display: none;
+  }
+  .folder-tablet {
+    display: block;
+  }
+  .folder-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .folder-desktop {
+    display: none;
+  }
+  .folder-tablet {
+    display: none;
+  }
+  .folder-mobile {
+    display: block;
+  }
+}
 /* Hero text sizes by breakpoint */
 .hero-title-responsive {
   font-size: 1.5rem;
@@ -112,6 +147,16 @@ footer {
     max-width: 100vw;
     padding-left: 1rem;
     padding-right: 1rem;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+  }
+  .footer-top-line {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 /* Let's chat button gentle wave animation */

@@ -74,7 +74,7 @@ export default function Home() {
         <div className="max-w-[1160px] w-full mx-auto px-0">
         
         {/* ==================== ABOUT ME SECTION ==================== */}
-        <section id="about-me" className="py-8" style={{ scrollMarginTop: '32px' }}>
+  <section id="about-me" className="py-8 about-me-scroll-margin">
           {/* Fixed pixel grid: 10 columns of 107px each + 9 gaps of 10px = 1160px */}
           <div className="about-grid">
             
@@ -201,10 +201,13 @@ export default function Home() {
             <div 
               className="card-mockup rounded-[16px] overflow-hidden relative"
             >
+              <link rel="preload" as="image" href="/assets/identity-mockup.webp" />
               <img 
-                src="/assets/poster-mockup-final.png" 
+                src="/assets/identity-mockup.webp" 
                 alt="Brand Identity v1, Mockup" 
                 className="w-full h-full object-cover"
+                loading="eager"
+                fetchPriority="high"
               />
               <p className="card-bottom-left font-body absolute" style={{ color: 'white', left: '18px', bottom: '16px' }}>
                 Brand Identity v1, Mockup
@@ -312,13 +315,7 @@ export default function Home() {
         {/* ==================== ECLIPSE SECTION ==================== */}
         <section
           id="eclipse"
-          className="flex flex-col items-center justify-center"
-          style={{
-            scrollMarginTop: '80px',
-            marginTop: '16px', // closer to About Me
-            marginBottom: '16px', // closer to footer
-            minHeight: '120px', // still enough for breathing effect
-          }}
+          className="flex flex-col items-center justify-center eclipse-scroll-margin"
         >
           <div
             style={{

@@ -1,5 +1,5 @@
 
-import '../styles/globals.css'
+import '../src/styles/globals.css'
 import Image from 'next/image'
 
 
@@ -92,7 +92,7 @@ export default function RootLayout({
                   GitHub ↗
                 </a>
               </div>
-              <span className="footer-copyright">© 2026 Alex Wilczewski</span>
+              <span style={{ fontSize: '12px', marginTop: '0.5rem', display: 'inline-block' }}>© {new Date().getFullYear()} Alex Wilczewski</span>
             </div>
           </div>
         </footer>

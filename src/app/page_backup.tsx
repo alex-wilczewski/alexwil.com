@@ -1,5 +1,5 @@
-// Temporary workaround for Next.js stale type bug
 'use client'
+
 
 import { useEffect, useRef, useState } from 'react';
 
@@ -26,6 +26,7 @@ export default function Home() {
     // eslint-disable-next-line
   }, [isSticky]);
 
+  // Trivial edit to force Next.js to regenerate types
   return (
     <main className="min-h-screen bg-[#fafaf8]">
       {/* Hero/Profile Section */}
@@ -55,38 +56,29 @@ export default function Home() {
         ref={navRef}
         className={`relative transition-all duration-300 mt-6 sticky top-4 z-50 flex justify-center gap-2 nav-width-responsive ${isSticky ? 'nav-glassy-rounded' : 'nav-plain'}`}
       >
-        {[ 
+        {[
           { label: 'About me', href: '#about-me' },
-          { label: 'Coming Soon...', href: '#eclipse', isComingSoon: true }
+          { label: 'Coming Soon...', href: '#eclipse' }
         ].map((item) => (
-          item.isComingSoon ? (
-            <a
-              key={item.label}
-              href={item.href}
-              className="px-2 py-1 text-xs font-bold text-neutral-700 hover:bg-neutral-100 transition-colors font-zalando nav-link-hover tracking-wide"
-              style={{ fontFamily: 'Zalando Sans Expanded, sans-serif', fontWeight: 800, letterSpacing: '0.01em' }}
-            >
-              {item.label}
-            </a>
-          ) : (
-            <a
-              key={item.label}
-              href={item.href}
-              className="px-2 py-1 text-xs font-medium text-neutral-700 hover:bg-neutral-100 transition-colors font-zalando nav-link-hover"
-            >
-              {item.label}
-            </a>
-          )
+          <a
+            key={item.label}
+            href={item.href}
+            className="px-2 py-1 text-xs font-medium text-neutral-700 hover:bg-neutral-100 transition-colors font-zalando nav-link-hover"
+          >
+            {item.label}
+          </a>
         ))}
       </div>
 
       {/* Main Grid Container - fixed width, centered */}
       <div className="w-full">
         <div className="max-w-[1160px] w-full mx-auto px-0">
+        
         {/* ==================== ABOUT ME SECTION ==================== */}
   <section id="about-me" className="py-8 about-me-scroll-margin">
           {/* Fixed pixel grid: 10 columns of 107px each + 9 gaps of 10px = 1160px */}
           <div className="about-grid">
+            
             {/* ROW 1 */}
             {/* Folder Card - cols 1-3 (341px), row 1 */}
             <div 
@@ -332,16 +324,15 @@ export default function Home() {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              width: '100%',
-              padding: 32
+              width: '100%'
             }}
           >
             <span
               className="eclipse-breathing-wave font-zalando"
               style={{
-                fontFamily: 'Zalando Sans Expanded, sans-serif',
+                fontFamily: 'ZalandoSans-Expanded, sans-serif',
                 fontSize: '32px',
-                fontWeight: 800,
+                fontWeight: 700,
                 color: '#1A1813',
                 letterSpacing: '0.01em',
                 textAlign: 'center',

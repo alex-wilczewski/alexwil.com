@@ -35,31 +35,34 @@ export default function RootLayout({
                 <Image src="/assets/logo-black.svg" alt="Alex Wilczewski Logo" width={180} height={60} className="h-14 w-auto" priority />
               </a>
             </div>
-          {/* Let's chat button triggers modal */}
           <button
-            id="lets-chat-btn"
+            id="coming-soon-btn"
             className="text-sm font-semibold px-5 py-2 rounded-[11px] bg-white hover:bg-neutral-100 transition-colors shadow-md focus:outline-none focus:ring-2 focus:ring-neutral-300 border border-neutral-200"
             style={{ minWidth: 110, boxShadow: '0 2px 10px 0 rgba(31,38,135,0.10)' }}
             type="button"
-            // Modal logic will be added in next step
+            tabIndex={-1}
+            aria-label="Coming soon"
           >
             <span
-              className="lets-chat-animated-text font-zalando"
+              className="eclipse-breathing-wave font-zalando"
               style={{
                 display: 'inline-block',
                 fontSize: '1rem',
-                fontWeight: 700,
+                fontWeight: 800,
                 letterSpacing: '0.01em',
-                fontFamily: 'ZalandoSans-Expanded, sans-serif'
+                fontFamily: 'Zalando Sans Expanded, sans-serif',
+                color: '#1A1813',
+                textAlign: 'center',
+                lineHeight: 1.1
               }}
             >
               {Array.from('Coming soon...').map((char, i) => (
                 <span
                   key={i}
-                  className="lets-chat-animated-letter"
+                  className="eclipse-breathing-letter"
                   style={{
                     display: 'inline-block',
-                    animationDelay: `${i * 0.07}s`
+                    animationDelay: `${i * 0.08}s`
                   }}
                 >
                   {char === ' ' ? '\u00A0' : char}
@@ -67,16 +70,15 @@ export default function RootLayout({
               ))}
             </span>
           </button>
-          {/* Modal structure will be added in the next step */}
         </header>
         {/* Main content */}
         <main className="flex-1 flex flex-col items-center w-full px-2">
           {children}
         </main>
         {/* Footer */}
-        <footer className="w-full mt-4 py-12 px-8 flex flex-row justify-between items-center max-w-6xl mx-auto gap-8 text-sm">
-          <div className="w-full border-t border-neutral-200 max-w-6xl mx-auto flex flex-row justify-between items-center gap-8 pt-8">
-            <div className="flex items-center gap-2 select-none mb-4 md:mb-0">
+        <footer className="w-full py-12 px-8 flex flex-row justify-between items-center max-w-6xl gap-8 text-sm">
+          <div className="w-full border-t border-neutral-200 max-w-6xl flex flex-row justify-between items-center gap-8 pt-8">
+            <div className="flex items-center gap-2 select-none md:mb-0">
               <a href="https://alexwil.com" aria-label="Home">
                 <Image src="/assets/logo-black.svg" alt="Alex Wilczewski Logo" width={180} height={60} className="h-14 w-auto" />
               </a>

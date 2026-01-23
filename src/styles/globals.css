@@ -549,6 +549,16 @@ body {
   background: #94a3b8;
 }
 
+@media (max-width: 799px) {
+  .nav-glassy-rounded {
+    width: 368px !important;
+    max-width: 368px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+}
 
 /* Folder card image switching */
 /* Default: desktop */
@@ -729,9 +739,9 @@ body {
 @media (max-width: 799px) {
   .about-grid {
     display: block;
-    width: 388px;
-    min-width: 388px;
-    max-width: 388px;
+    width: 368px;
+    min-width: 368px;
+    max-width: 368px;
     margin: 0 auto;
     position: relative;
   }
@@ -747,7 +757,7 @@ body {
     position: absolute;
     top: 0;
     left: 278px;
-    width: 110px !important;
+    width: 90px !important;
     height: 184px !important;
   }
   /* Row 2 */
@@ -755,14 +765,14 @@ body {
     position: absolute;
     top: 194px;
     left: 0;
-    width: 189px !important;
+    width: 179px !important;
     height: 183px !important;
   }
   .card-apple {
     position: absolute;
     top: 194px;
-    left: 199px;
-    width: 189px !important;
+    left: 189px;
+    width: 179px !important;
     height: 183px !important;
   }
   /* Row 3 */
@@ -770,14 +780,14 @@ body {
     position: absolute;
     top: 387px;
     left: 0;
-    width: 189px !important;
+    width: 179px !important;
     height: 183px !important;
   }
   .card-projects {
     position: absolute;
     top: 387px;
-    left: 199px;
-    width: 189px !important;
+    left: 189px;
+    width: 179px !important;
     height: 183px !important;
   }
   /* Row 4: full width */
@@ -785,7 +795,7 @@ body {
     position: absolute;
     top: 580px;
     left: 0;
-    width: 388px !important;
+    width: 368px !important;
     height: 183px !important;
   }
   /* Row 5: full width */
@@ -793,7 +803,7 @@ body {
     position: absolute;
     top: 773px;
     left: 0;
-    width: 388px !important;
+    width: 368px !important;
     height: 183px !important;
   }
   /* Row 6 */
@@ -801,14 +811,14 @@ body {
     position: absolute;
     top: 966px;
     left: 0;
-    width: 189px !important;
+    width: 179px !important;
     height: 183px !important;
   }
   .card-mockup {
     position: absolute;
     top: 966px;
-    left: 199px;
-    width: 189px !important;
+    left: 189px;
+    width: 179px !important;
     height: 183px !important;
   }
   .about-grid {

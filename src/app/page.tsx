@@ -36,7 +36,7 @@ export default function Home() {
             alt="Alex Wilczewski profile"
             width={160}
             height={160}
-            className="rounded-full border-4 border-neutral-200 shadow-md bg-white hero-img-responsive"
+            className="rounded-full border-4 border-neutral-200 bg-white hero-img-responsive"
             style={{ objectFit: 'cover' }}
           />
           <div className="flex flex-col items-start justify-center text-left font-body hero-content-responsive">
@@ -168,7 +168,7 @@ export default function Home() {
                 className="card-bottom-left font-body absolute"
                 style={{ color: 'white', left: '18px', bottom: '16px' }}
               >
-                SUNY Purchase BFA
+                SUNY Purchase BA
               </p>
             </div>
 
@@ -242,7 +242,7 @@ export default function Home() {
 
             {/* What inspires me / Mission Statement - cols 5-7 (341px), row 2 */}
             <div 
-              className="card-mission bg-[#E8F5E9] rounded-[16px] relative p-[20px]"
+              className="card-mission bg-[#E8F5E9] border border-neutral-200 rounded-[16px] relative p-[20px]"
             >
               <h4 className="card-title font-bold text-neutral-900 leading-tight font-zalando">What inspires me?</h4>
               <p className="card-body font-body mt-2" style={{ lineHeight: '1.4', color: '#1A1813' }}>
@@ -259,7 +259,7 @@ export default function Home() {
             {/* ROW 3 */}
             {/* I love supporting great causes - cols 3-6 (458px), row 3 */}
             <div 
-              className="card-causes bg-[#1B4D3E] rounded-[16px] relative p-[20px]"
+              className="card-causes bg-[#1B4D3E] border border-neutral-200 rounded-[16px] relative p-[20px]"
             >
               <h4 className="card-title text-white font-bold leading-tight font-zalando" style={{ fontSize: '16px' }}>I love supporting great causes</h4>
               <p className="card-body font-body mt-2" style={{ lineHeight: '1.4', color: 'rgba(255, 255, 255, 0.8)' }}>
@@ -278,7 +278,7 @@ export default function Home() {
 
             {/* Apple Specialist - cols 7-8 (224px), row 3 */}
             <div 
-              className="card-apple bg-[#F5F5F5] rounded-[16px] relative"
+              className="card-apple bg-[#F5F5F5] border border-neutral-200 rounded-[16px] relative"
             >
               <img 
                 src="/assets/apple-logo.svg" 
@@ -296,7 +296,7 @@ export default function Home() {
 
             {/* Check out my other projects - cols 9-10 (224px), row 3 */}
             <div 
-              className="card-projects rounded-[16px] relative bg-[#D4F979] p-[20px]"
+              className="card-projects border border-neutral-200 rounded-[16px] relative bg-[#D4F979] p-[20px]"
             >
               <h4 className="card-title font-bold text-neutral-900 leading-tight font-zalando project-title-desktop">Check out my other work →</h4>
               <h4 className="card-title font-bold text-neutral-900 leading-tight font-zalando project-title-mobile" style={{ display: 'none' }}>Check out my other work →</h4>

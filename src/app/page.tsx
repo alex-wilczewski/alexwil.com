@@ -271,21 +271,17 @@ export default function Home() {
 
           </div>
         </section>
-
-
-        {/* ==================== COMING SOON SECTION ==================== */}
-        {/* Section moved below eclipse */}
-
+        
         {/* ==================== ECLIPSE SECTION ==================== */}
         <section
           id="eclipse"
           className="py-8 eclipse-scroll-margin"
           style={{ paddingBottom: '32px' }}
         >
-          <div className="eclipse-grid" style={{ position: 'relative', width: '1160px', height: '1178px', margin: '0 auto' }}>
+          <div className="eclipse-grid" style={{ position: 'relative', width: '1160px', height: 'auto', minHeight: '1394px', margin: '0 auto' }}>
             {/* Mobile breakpoint grid (visible <=799px) - pixel perfect layout */}
             <div className="block max-[799px]:block min-[800px]:hidden">
-              <div className="eclipse-mobile-grid mobile-bento-align" style={{ position: 'relative', height: '1537px', transform: 'translateX(-2%)', left: '30%' }}>
+              <div className="eclipse-mobile-grid mobile-bento-align" style={{ position: 'relative', height: '1537px', transform: 'translateX(-2.85%)', left: '30%' }}>
                 {/* Card 1: Top left, 268x184 */}
                 <div
                   className="eclipse-mobile-card eclipse-mobile-card-1"
@@ -426,7 +422,7 @@ export default function Home() {
                     left: '189px', // 179 + 10
                     width: '179px',
                     height: '183px',
-                    background: '#FFFEFC',
+                    background: '#FCF9F2',
                     border: '1px solid #E6E5E1',
                     borderRadius: '16px',
                     overflow: 'hidden',
@@ -538,7 +534,7 @@ export default function Home() {
                     left: '189px', // 179 + 10
                     width: '179px',
                     height: '183px',
-                    background: '#FFFEFC',
+                    background: '#FCF9F2',
                     borderRadius: '16px',
                     borderWidth: '1px',
                     borderColor: '#E6E5E1',
@@ -689,7 +685,7 @@ export default function Home() {
                                     left: '0px',
                                     width: '368px',
                                     height: '183px',
-                                    background: '#FFFEFC',
+                                    background: '#FCF9F2',
                                     borderWidth: '1px',
                                     borderColor: '#E6E5E1',
                                     borderRadius: '16px',
@@ -799,16 +795,471 @@ export default function Home() {
               </div>
             </div>
             {/* Tablet breakpoint grid (visible 800px-1199px) */}
-            <div className="eclipse-tablet-wrapper">
-              <div className="eclipse-tablet folder-card-tablet" style={{ background: '#bbb' }} />
-              <div className="eclipse-tablet favicon-card-tablet" style={{ background: '#bbb' }} />
-              <div className="eclipse-tablet brand-color-card-tablet" style={{ background: '#bbb' }} />
-              <div className="eclipse-tablet light-mode-card-tablet" style={{ background: '#bbb' }} />
-              <div className="eclipse-tablet large-gradient-card-tablet" style={{ background: '#bbb' }} />
-              <div className="eclipse-tablet dark-mode-card-tablet" style={{ background: '#bbb' }} />
-              <div className="eclipse-tablet night-graphic-card-tablet" style={{ background: '#bbb' }} />
-              <div className="eclipse-tablet sticker-sheet-card-tablet" style={{ background: '#bbb' }} />
-              <div className="eclipse-tablet ios-mockup-card-tablet" style={{ background: '#bbb' }} />
+            <div
+              className="eclipse-tablet-grid"
+            >
+              <div style={{ position: 'relative', width: '100%', height: '100%', display: 'block' }}>
+                {/* Card 1: 302x224px, absolute */}
+                <div className="eclipse-tablet folder-card-tablet" style={{ background: 'transparent', borderRadius: '16px', width: '302px', height: '224px', position: 'absolute', top: 0, left: 0, overflow: 'hidden', padding: 0, margin: 0, display: 'block' }}>
+                  <img 
+                    src="/assets/tablet-folder-card.png" 
+                    alt="Tablet Folder Card" 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px', display: 'block' }}
+                  />
+                  {/* 2025-2026 Tag at bottom right */}
+                  <span
+                    style={{
+                      position: 'absolute',
+                      right: '12px',
+                      bottom: '12px',
+                      borderRadius: '11px',
+                      padding: '5px 10px',
+                      background: '#E7FE96',
+                      color: '#1a1813',
+                      fontFamily: 'Zalando Sans Expanded, sans-serif',
+                      fontWeight: 700,
+                      fontSize: '0.875rem',
+                      lineHeight: '1.25rem',
+                      boxShadow: '0 1px 4px 0 rgba(31,38,135,0.08)',
+                      zIndex: 2,
+                      display: 'inline-block',
+                      letterSpacing: 0
+                    }}
+                  >
+                    2025-2026
+                  </span>
+                  {/* Brand Identity Tag at bottom right */}
+                  <span
+                    style={{
+                      position: 'absolute',
+                      right: '12px',
+                      bottom: '52px',
+                      borderRadius: '11px',
+                      padding: '5px 10px',
+                      background: '#4D48E2',
+                      color: '#FFFFFF',
+                      fontFamily: 'Zalando Sans Expanded, sans-serif',
+                      fontWeight: 700,
+                      fontSize: '0.875rem',
+                      lineHeight: '1.25rem',
+                      zIndex: 2,
+                      display: 'inline-block',
+                      letterSpacing: 0
+                    }}
+                  >
+                    Brand Identity Design
+                  </span>
+                  {/* Eclipse Tag at bottom right */}
+                  <span
+                    style={{
+                      position: 'absolute',
+                      right: '12px',
+                      bottom: '92px',
+                      borderRadius: '11px',
+                      padding: '5px 10px',
+                      background: '#211ADB',
+                      color: '#FFFFFF',
+                      fontFamily: 'Zalando Sans Expanded, sans-serif',
+                      fontWeight: 700,
+                      fontSize: '0.875rem',
+                      lineHeight: '1.25rem',
+                      zIndex: 2,
+                      display: 'inline-block',
+                      letterSpacing: 0
+                    }}
+                  >
+                    Eclipse
+                  </span>
+                </div>
+                {/* Card 2: 224x224px, 10px to the right */}
+                <div
+                  className="eclipse-tablet second-card-tablet"
+                  style={{
+                    background: '#E9E9FC',
+                    border: '1px solid #E6E5E1',
+                    borderRadius: '16px',
+                    width: '224px',
+                    height: '224px',
+                    position: 'absolute',
+                    top: 0,
+                    left: '312px',
+                    boxShadow: 'none',
+                    padding: 0,
+                    margin: 0,
+                    display: 'block',
+                  }}
+                >
+                  <img
+                    src="/assets/eclipse-favicon.png"
+                    alt="Eclipse Favicon"
+                    style={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      width: '62px',
+                      height: '62px',
+                      transform: 'translate(-50%, -50%)',
+                      display: 'block',
+                    }}
+                  />
+                  <span
+                    style={{
+                      position: 'absolute',
+                      left: '18px',
+                      bottom: '16px',
+                      fontFamily: 'Zalando Sans, sans-serif',
+                      fontWeight: 400,
+                      fontSize: '12px',
+                      color: '#1A1813',
+                      letterSpacing: 0,
+                      lineHeight: '1.4',
+                    }}
+                  >
+                    Eclipse Favicon
+                  </span>
+                </div>
+                {/* Card 3: 224x224px, 10px to the right of card 2 */}
+                <div
+                  className="eclipse-tablet third-card-tablet"
+                  style={{
+                    background: '#FCF9F2',
+                    border: '1px solid #E6E5E1',
+                    borderRadius: '16px',
+                    width: '224px',
+                    height: '224px',
+                    position: 'absolute',
+                    top: 0,
+                    left: '546px',
+                    boxShadow: 'none',
+                    padding: 0,
+                    margin: 0,
+                    display: 'block',
+                  }}
+                >
+                  <img
+                    src="/assets/color-sheet-preview.svg"
+                    alt="Color Sheet Preview"
+                    style={{
+                      position: 'absolute',
+                      top: '14px',
+                      left: '14px',
+                      right: '14px',
+                      width: 'calc(100% - 28px)',
+                      height: 'auto',
+                      display: 'block',
+                      marginLeft: 'auto',
+                      marginRight: 'auto',
+                    }}
+                  />
+                  <a
+                    href="https://eclipse-color-sheet.alexwil.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      position: 'absolute',
+                      left: '18px',
+                      bottom: '16px',
+                      fontFamily: 'Zalando Sans, sans-serif',
+                      fontWeight: 400,
+                      fontSize: '12px',
+                      color: '#1a1813',
+                      letterSpacing: 0,
+                      lineHeight: '1.4',
+                      textDecoration: 'underline',
+                      zIndex: 2,
+                    }}
+                  >
+                    Brand Color Sheet
+                  </a>
+                </div>
+                {/* Card 4: 302x224px, 10px below card 1 */}
+                <div className="eclipse-tablet fourth-card-tablet" style={{
+                  background: '#FCF9F2',
+                  border: '1px solid #E6E5E1',
+                  borderRadius: '16px',
+                  width: '302px',
+                  height: '224px',
+                  position: 'absolute',
+                  top: '234px',
+                  left: 0
+                }}
+                >
+                  <img
+                    src="/assets/light-cta-button.svg"
+                    alt="Light CTA Button"
+                    style={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      width: 'fit-content',
+                      height: 'fit-content',
+                      objectFit: 'contain',
+                      display: 'block',
+                      overflow: 'hidden',
+                      borderRadius: '16px',
+                    }}
+                  />
+                  <span
+                    style={{
+                      position: 'absolute',
+                      left: '18px',
+                      bottom: '16px',
+                      fontFamily: 'Zalando Sans, sans-serif',
+                      fontWeight: 400,
+                      fontSize: '12px',
+                      color: '#1a1813',
+                      letterSpacing: 0,
+                      lineHeight: '1.4',
+                      zIndex: 2,
+                    }}
+                  >
+                    CTA button light mode
+                  </span>
+                </div>
+                {/* Card 5: 458x458px, 10px to the right of card 4 */}
+                <div className="eclipse-tablet fifth-card-tablet" style={{ background: 'transparent', borderRadius: '16px', width: '458px', height: '458px', position: 'absolute', top: '234px', left: '312px' }}>
+                  <span
+                    style={{
+                      position: 'absolute',
+                      left: '18px',
+                      bottom: '16px',
+                      fontFamily: 'Zalando Sans, sans-serif',
+                      fontWeight: 400,
+                      fontSize: '12px',
+                      color: '#fff',
+                      letterSpacing: 0,
+                      lineHeight: '1.4',
+                      zIndex: 2,
+                    }}
+                  >
+                    Haze-Grain Gradient Background
+                  </span>
+                  <img
+                    src="/assets/tablet-gradient.png"
+                    alt="Tablet Gradient Background"
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      borderRadius: '16px',
+                      zIndex: 1,
+                    }}
+                  />
+                </div>
+                {/* Card 6: 302x224px, directly below card 4 */}
+                <div className="eclipse-tablet sixth-card-tablet" style={{
+                  background: '#060522',
+                  borderRadius: '16px',
+                  width: '302px',
+                  height: '224px',
+                  position: 'absolute',
+                  top: '468px',
+                  left: 0
+                }}>
+                  <img
+                    src="/assets/dark-cta-button.svg"
+                    alt="Dark CTA Button"
+                    style={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      width: 'fit-content',
+                      height: 'fit-content',
+                      objectFit: 'contain',
+                      display: 'block',
+                      overflow: 'hidden',
+                      borderRadius: '16px',
+                    }}
+                  />
+                  <span
+                    style={{
+                      position: 'absolute',
+                      left: '18px',
+                      bottom: '16px',
+                      fontFamily: 'Zalando Sans, sans-serif',
+                      fontWeight: 400,
+                      fontSize: '12px',
+                      color: '#fff',
+                      letterSpacing: 0,
+                      lineHeight: '1.4',
+                      zIndex: 2,
+                    }}
+                  >
+                    CTA button dark mode
+                  </span>
+                </div>
+                {/* Card 7: 224x224px, directly below card 6 */}
+                <div className="eclipse-tablet seventh-card-tablet" style={{
+                  background: '#FCF9F2',
+                  border: '1px solid #E6E5E1',
+                  borderRadius: '16px',
+                  width: '224px',
+                  height: '224px',
+                  position: 'absolute',
+                  top: '702px',
+                  left: 0
+                }}>
+                  <img
+                    src="/assets/night-horizon-graphic.png"
+                    alt="Night Horizon Graphic"
+                    style={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      width: '90px',
+                      height: '90px',
+                      objectFit: 'contain',
+                      display: 'block',
+                      overflow: 'hidden',
+                      borderRadius: '16px',
+                    }}
+                  />
+                  <span
+                    style={{
+                      position: 'absolute',
+                      left: '18px',
+                      bottom: '16px',
+                      fontFamily: 'Zalando Sans, sans-serif',
+                      fontWeight: 400,
+                      fontSize: '12px',
+                      color: '#1a1813',
+                      letterSpacing: 0,
+                      lineHeight: '1.4',
+                      zIndex: 2,
+                    }}
+                  >
+                    Night Horizon Graphic
+                  </span>
+                </div>
+                {/* Card 8: 536x692px, 10px to the right of card 7 */}
+                <div className="eclipse-tablet eighth-card-tablet" style={{ background: '#bbb', borderRadius: '16px', width: '536px', height: '692px', position: 'absolute', top: '702px', left: '234px' }} />
+                                <div className="eclipse-tablet eighth-card-tablet" style={{
+                                  background: '#060522',
+                                  border: 'none',
+                                  borderRadius: '16px',
+                                  width: '536px',
+                                  height: '692px',
+                                  position: 'absolute',
+                                  top: '702px',
+                                  left: '234px'
+                                }}>
+                                  <img
+                                    src="/assets/eclipse-sticker-1.svg"
+                                    alt="Eclipse Sticker 1"
+                                    style={{
+                                      position: 'absolute',
+                                      top: '10px',
+                                      right: '50px',
+                                      width: '200px',
+                                      height: '200px',
+                                      objectFit: 'contain',
+                                      display: 'block',
+                                      overflow: 'hidden',
+                                      borderRadius: '16px',
+                                      zIndex: 1,
+                                    }}
+                                  />
+                                  <img
+                                    src="/assets/eclipse-sticker-2.png"
+                                    alt="Eclipse Sticker 2"
+                                    style={{
+                                      position: 'absolute',
+                                      top: '20%',
+                                      left: '50px',
+                                      width: '250px',
+                                      height: '250px',
+                                      objectFit: 'contain',
+                                      display: 'block',
+                                      overflow: 'hidden',
+                                      borderRadius: '16px',
+                                      zIndex: 1,
+                                    }}
+                                  />
+                                  <img
+                                    src="/assets/eclipse-sticker-3.svg"
+                                    alt="Eclipse Sticker 3"
+                                    style={{
+                                      position: 'absolute',
+                                      top: '50%',
+                                      right: '60px',
+                                      width: '250px',
+                                      height: '250px',
+                                      objectFit: 'contain',
+                                      display: 'block',
+                                      overflow: 'hidden',
+                                      borderRadius: '16px',
+                                      rotate: '15deg',
+                                      zIndex: 1,
+                                    }}
+                                  />
+                                  <span
+                                    style={{
+                                      position: 'absolute',
+                                      left: '18px',
+                                      bottom: '16px',
+                                      fontFamily: 'Zalando Sans, sans-serif',
+                                      fontWeight: 400,
+                                      fontSize: '12px',
+                                      color: '#fff',
+                                      letterSpacing: 0,
+                                      lineHeight: '1.4',
+                                      zIndex: 2,
+                                    }}
+                                  >
+                                    Sticker Sheet
+                                  </span>
+                                </div>
+                {/* Card 9: 224x458px, directly below card 7 */}
+                <div className="eclipse-tablet ninth-card-tablet" style={{ background: '#bbb', borderRadius: '16px', width: '224px', height: '458px', position: 'absolute', top: '936px', left: 0 }} />
+                              <div className="eclipse-tablet ninth-card-tablet" style={{
+                                background: '#FCF9F2',
+                                borderRadius: '16px',
+                                borderWidth: '1px',
+                                borderColor: '#E6E5E1',
+                                width: '224px',
+                                height: '458px',
+                                position: 'absolute',
+                                top: '936px',
+                                left: 0
+                              }}>
+                                <span
+                                  style={{
+                                    position: 'absolute',
+                                    left: '18px',
+                                    bottom: '16px',
+                                    fontFamily: 'Zalando Sans, sans-serif',
+                                    fontWeight: 400,
+                                    fontSize: '12px',
+                                    color: '#1a1813',
+                                    letterSpacing: 0,
+                                    lineHeight: '1.4',
+                                    zIndex: 2,
+                                  }}
+                                >
+                                  iOS Icon Mockup
+                                </span>
+                                <img
+                                  src="/assets/tablet-icon-mockup.png"
+                                  alt="Tablet Icon Mockup"
+                                  style={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'cover',
+                                    borderRadius: '16px',
+                                    zIndex: 1,
+                                  }}
+                                />
+                              </div>
+              </div>
             </div>
             {/* Row 1 */}
             <div className="eclipse-desktop-only">

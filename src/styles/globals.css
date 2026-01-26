@@ -1,3 +1,26 @@
+/* Strictly show .eclipse-tablet-grid only at the tablet breakpoint (800px-1199px) */
+.eclipse-tablet-grid {
+  display: none !important;
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .eclipse-tablet-grid {
+    display: block !important;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  /* Eclipse tablet grid container */
+  .eclipse-tablet-grid {
+    display: grid;
+    width: 770px;
+    height: 1394px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+    position: relative;
+    background: none;
+  }
+}
 @media (max-width: 799px) {
   .eclipse-grid {
     width: 100vw !important;

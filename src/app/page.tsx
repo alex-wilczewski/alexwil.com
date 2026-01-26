@@ -311,6 +311,70 @@ export default function Home() {
                       borderRadius: '16px',
                     }}
                   />
+                   {/* 2025-2026 Tag at bottom right */}
+                  <span
+                    style={{
+                      position: 'absolute',
+                      right: '12px',
+                      bottom: '12px',
+                      borderRadius: '11px',
+                      padding: '5px 10px',
+                      background: '#E7FE96',
+                      color: '#1a1813',
+                      fontFamily: 'Zalando Sans Expanded, sans-serif',
+                      fontWeight: 700,
+                      fontSize: '0.875rem',
+                      lineHeight: '1.25rem',
+                      boxShadow: '0 1px 4px 0 rgba(31,38,135,0.08)',
+                      zIndex: 2,
+                      display: 'inline-block',
+                      letterSpacing: 0
+                    }}
+                  >
+                    2025-2026
+                  </span>
+                  {/* Brand Identity Tag at bottom right */}
+                  <span
+                    style={{
+                      position: 'absolute',
+                      right: '12px',
+                      bottom: '52px',
+                      borderRadius: '11px',
+                      padding: '5px 10px',
+                      background: '#4D48E2',
+                      color: '#FFFFFF',
+                      fontFamily: 'Zalando Sans Expanded, sans-serif',
+                      fontWeight: 700,
+                      fontSize: '0.875rem',
+                      lineHeight: '1.25rem',
+                      zIndex: 2,
+                      display: 'inline-block',
+                      letterSpacing: 0
+                    }}
+                  >
+                    Brand Identity Design
+                  </span>
+                  {/* Eclipse Tag at bottom right */}
+                  <span
+                    style={{
+                      position: 'absolute',
+                      right: '12px',
+                      bottom: '92px',
+                      borderRadius: '11px',
+                      padding: '5px 10px',
+                      background: '#211ADB',
+                      color: '#FFFFFF',
+                      fontFamily: 'Zalando Sans Expanded, sans-serif',
+                      fontWeight: 700,
+                      fontSize: '0.875rem',
+                      lineHeight: '1.25rem',
+                      zIndex: 2,
+                      display: 'inline-block',
+                      letterSpacing: 0
+                    }}
+                  >
+                    Eclipse
+                  </span>
                 </div>
                 {/* Card 2: 10px right of Card 1, 90x184 */}
                 <div

@@ -1,47 +1,83 @@
-/* Folder Card Responsive Images */
-
-.folder-desktop {
-  display: block !important;
-}
-.folder-tablet {
-  display: none !important;
-}
-.folder-mobile {
-  display: none !important;
-}
-
-@media (max-width: 1024px) {
-  .folder-desktop {
-    display: none;
-  }
-  .folder-tablet {
-    display: block;
-  }
-  .folder-mobile {
-    display: none;
+@media (min-width: 1200px) {
+  .eclipse-grid {
+    height: 1178px !important;
+    min-height: 1178px !important;
   }
 }
-
-@media (max-width: 600px) {
-  .folder-desktop {
-    display: none;
-  }
-  .folder-tablet {
-    display: none;
-  }
-  .folder-mobile {
-    display: block;
+@media (min-width: 1200px) {
+  #eclipse.eclipse-scroll-margin {
+    min-height: 1178px !important;
+    height: auto !important;
+    padding-bottom: 2rem !important;
+    margin-bottom: 0 !important;
   }
 }
-/* Hero text sizes by breakpoint */
-.hero-title-responsive {
-  font-size: 1.5rem;
-  line-height: 1.2;
-  font-weight: 800;
+@media (min-width: 800px) and (max-width: 1199px) {
+  #eclipse.eclipse-scroll-margin {
+    min-height: 1178px;
+    height: auto;
+  }
+}
+@media (max-width: 799px) {
+  #eclipse.eclipse-scroll-margin {
+    min-height: 1537px !important;
+    height: auto !important;
+    padding-bottom: 2rem !important;
+    margin-bottom: 0 !important;
+  }
+  .eclipse-grid {
+    min-height: 1537px !important;
+    height: auto !important;
+    position: relative;
+    overflow: visible !important;
+  }
+}
+@media (max-width: 799px) {
+  /* (Removed duplicate/conflicting rules for #eclipse.eclipse-scroll-margin) */
+}
+/* Align eclipse mobile grid with about-me grid */
+.mobile-bento-align {
+  max-width: 368px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  position: relative;
+}
+/* Utility: Only show on desktop (min-width: 1200px) */
+.eclipse-desktop-only {
+  display: block;
+}
+@media (max-width: 1199px) {
+  .eclipse-desktop-only {
+    display: none !important;
+  }
+}
+/* Hide desktop eclipse content at tablet and mobile breakpoints */
+@media (max-width: 1199px) {
+  .eclipse-desktop,
+  div.eclipse-desktop,
+  .eclipse-folder-card.eclipse-desktop,
+  .eclipse-favicon-card.eclipse-desktop,
+  .eclipse-color-card.eclipse-desktop,
+  .eclipse-large-top-card.eclipse-desktop,
+  .eclipse-lightmode-card.eclipse-desktop,
+  .eclipse-nighthorizon-card.eclipse-desktop,
+  .eclipse-bluebox-card.eclipse-desktop,
+  .eclipse-darkmode-card.eclipse-desktop,
+  .eclipse-bottomlarge-card.eclipse-desktop,
+  .eclipse-bottomright-card.eclipse-desktop,
+  .eclipse-middleleft-card.eclipse-desktop {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    position: absolute !important;
+    z-index: -9999 !important;
+  }
 }
 .hero-role-responsive {
-  font-size: 1rem;
-  line-height: 1.2;
   font-weight: 400;
   color: #525252;
 }
@@ -62,26 +98,13 @@
   }
 }
 @media (max-width: 799px) {
-  .hero-title-responsive {
-    font-size: 1.25rem !important;
-  }
-  .hero-role-responsive {
-    font-size: 0.875rem !important;
-  }
-  .hero-location-responsive {
-    font-size: 0.875rem !important;
-  }
-}
-/* Responsive hero section tweaks for mobile */
-@media (max-width: 799px) {
-  .hero-section-responsive {
-    padding-top: 2.5rem !important;
-    padding-bottom: 2.5rem !important;
-    margin-top: 1.5rem !important;
-    margin-bottom: 1.5rem !important;
-  }
-  .hero-inner-responsive {
-    gap: 1.5rem !important;
+  .eclipse-grid {
+    width: 770px !important;
+    height: 1394px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    position: relative;
+    display: block;
   }
   .hero-img-responsive {
     width: 132px !important;
@@ -290,6 +313,10 @@ footer {
   box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.5);
   pointer-events: none;
 }
+.eclipse-folder-card.eclipse-desktop {
+  background: transparent !important;
+  border: none !important;
+}
 .eclipse-folder-card,
 .eclipse-favicon-card,
 .eclipse-color-card,
@@ -299,7 +326,8 @@ footer {
 .eclipse-bluebox-card,
 .eclipse-darkmode-card,
 .eclipse-bottomlarge-card,
-.eclipse-bottomright-card {
+.eclipse-bottomright-card,
+.eclipse-middleleft-card {
   background: #f5f3ff;
   border: 2px solid #d1d5db;
   border-radius: 18px;
@@ -312,7 +340,7 @@ footer {
 .eclipse-folder-card {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  width: 302px;
+  width: 341px;
   height: 224px;
 }
 .eclipse-favicon-card {
@@ -371,12 +399,10 @@ footer {
 }
 /* ==================== ECLIPSE BENTO GRID ==================== */
 .eclipse-grid {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: 302px 224px 224px 410px;
-  grid-template-rows: 224px 224px 224px 224px;
-  width: 1160px; /* 302+224+224+410+3*10 */
+  position: relative;
+  width: 1160px;
   margin: 0 auto;
+  overflow: visible !important;
 }
 .zine-link-desktop { display: block; }
 @media (max-width: 799px) {
@@ -435,66 +461,24 @@ footer {
   .project-body-mobile {
     display: block !important;
   }
-  .project-title-desktop,
-  .project-body-desktop {
-    display: none !important;
+  .eclipse-folder-card,
+  .eclipse-favicon-card,
+  .eclipse-color-card,
+  .eclipse-large-top-card,
+  .eclipse-lightmode-card,
+  .eclipse-nighthorizon-card,
+  .eclipse-bluebox-card,
+  .eclipse-darkmode-card,
+  .eclipse-bottomlarge-card,
+  .eclipse-bottomright-card {
+    background: #f5f3ff;
+    border: 2px solid #d1d5db;
+    border-radius: 18px;
+    min-height: 60px;
+    min-width: 60px;
+    box-sizing: border-box;
+    opacity: 1;
   }
-.card-body {
-  font-size: 14px;
-}
-.card-bottom-left {
-  font-size: 12px;
-}
-
-
-@media (max-width: 799px) {
-  .card-title {
-    font-size: 16px !important;
-  }
-  .card-body {
-    font-size: 12px !important;
-  }
-  .card-bottom-left {
-    font-size: 10px !important;
-  }
-}
-/* Project card text visibility for breakpoints */
-.project-title-mobile,
-.project-body-mobile {
-  display: none;
-}
-.project-title-desktop,
-.project-body-desktop {
-  display: block;
-}
-
-@media (max-width: 799px) {
-  .project-title-mobile,
-  .project-body-mobile {
-    display: block !important;
-  }
-  .project-title-desktop,
-  .project-body-desktop {
-    display: none !important;
-  }
-}
-@font-face {
-  font-family: 'Zalando Sans Variable';
-  src: url('/fonts/ZalandoSans-VariableFont_wdth,wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-stretch: 75% 125%;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Zalando Sans Semi Expanded';
-  src: url('/fonts/ZalandoSansSemiExpanded-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* Zalando Sans Expanded font-face setup */
 @font-face {
   font-family: 'Zalando Sans Expanded';
@@ -594,7 +578,15 @@ body {
  .zine-tablet, .zine-mobile { display: none; }
 
 /* Projects card tablet-only text */
- .projects-tablet-text { display: none; }
+.projects-tablet-text { display: none; }
+
+.projects-tablet-extra { display: none !important; }
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .projects-tablet-extra {
+    display: inline !important;
+  }
+}
 
 @media (max-width: 799px) {
   .folder-desktop { display: none; }

@@ -285,7 +285,7 @@ export default function Home() {
           <div className="eclipse-grid" style={{ position: 'relative', width: '1160px', height: '1178px', margin: '0 auto' }}>
             {/* Mobile breakpoint grid (visible <=799px) - pixel perfect layout */}
             <div className="block max-[799px]:block min-[800px]:hidden">
-              <div className="eclipse-mobile-grid mobile-bento-align" style={{ position: 'relative', height: '1537px' }}>
+              <div className="eclipse-mobile-grid mobile-bento-align" style={{ position: 'relative', height: '1537px', transform: 'translateX(-2%)', left: '30%' }}>
                 {/* Card 1: Top left, 268x184 */}
                 <div
                   className="eclipse-mobile-card eclipse-mobile-card-1"

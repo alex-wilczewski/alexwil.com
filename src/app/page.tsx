@@ -1,166 +1,3 @@
-{/* Card 1: Top left, 268x184 */}
-                <div
-                  className="eclipse-mobile-card eclipse-mobile-card-1"
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '268px',
-                    height: '184px',
-                    borderRadius: '16px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '1.25rem',
-                    color: '#fff',
-                                fontWeight: 600
-                              }}
-                >
-                  Card 1
-                </div>
-                {/* Card 3: 10px below Card 1, 179x183 */}
-                <div
-                  className="eclipse-mobile-card eclipse-mobile-card-3"
-                  style={{
-                    position: 'absolute',
-                    top: '194px', // 184 + 10
-                    left: 0,
-                    width: '179px',
-                    height: '183px',
-                    borderRadius: '16px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '1.25rem',
-                    color: '#fff',
-                    fontWeight: 600
-                  }}
-                >
-                  Card 3
-                </div>
-                {/* Card 4: 10px to the right of Card 3, 179x183 */}
-                <div
-                  className="eclipse-mobile-card eclipse-mobile-card-4"
-                  style={{
-                    position: 'absolute',
-                    top: '194px',
-                    left: '189px', // 179 + 10
-                    width: '179px',
-                    height: '183px',
-                    background: '#FFFEFC',
-                    border: '1px solid #E6E5E1',
-                    borderRadius: '16px',
-                    overflow: 'hidden',
-                    display: 'block',
-                  }}
-                  >
-                    <a
-                      href="https://eclipse-color-sheet.alexwil.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        position: 'absolute',
-                        left: '14px',
-                        bottom: '10px',
-                        fontFamily: 'Zalando Sans Regular, sans-serif',
-                        fontSize: '10px',
-                        color: '#1A1813',
-                        lineHeight: 1,
-                        letterSpacing: 0,
-                        fontWeight: 400,
-                        background: 'transparent',
-                        padding: 0,
-                        margin: 0,
-                        zIndex: 2,
-                        textDecoration: 'underline',
-                        textUnderlineOffset: '2px',
-                        cursor: 'pointer',
-                        display: 'block',
-                      }}
-                    >
-                      Brand Color Sheet
-                    </a>
-                  </div>
-                {/* Card 6: 10px to the right of Card 5, 179x183 */}
-                <div
-                  className="eclipse-mobile-card eclipse-mobile-card-6"
-                  style={{
-                    position: 'absolute',
-                    top: '387px',
-                    left: '189px', // 179 + 10
-                    width: '179px',
-                    height: '183px',
-                    borderRadius: '16px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '1.25rem',
-                    color: '#fff',
-                    fontWeight: 600
-                  }}
-                >
-                  Card 6
-                </div>
-                {/* Card 7: 10px to the bottom of Card 5, 179x183 */}
-                <div
-                  className="eclipse-mobile-card eclipse-mobile-card-7"
-                  style={{
-                    position: 'absolute',
-                    top: '580px',
-                    left: '0px',
-                    width: '368px',
-                    height: '569px',
-                    borderRadius: '16px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '1.25rem',
-                    color: '#fff',
-                    fontWeight: 600
-                  }}
-                >
-                  Card 7
-                </div>
-                {/* Card 8: 10px to the bottom of Card 7, 179x183 */}
-                <div
-                  className="eclipse-mobile-card eclipse-mobile-card-8"
-                  style={{
-                    position: 'absolute',
-                    top: '1159px',
-                    left: '0px',
-                    width: '368px',
-                    height: '183px',
-                    borderRadius: '16px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '1.25rem',
-                    color: '#fff',
-                    fontWeight: 600
-                  }}
-                >
-                  Card 8
-                </div>
-                {/* Card 9: 10px to the bottom of Card 8, 179x183 */}
-                <div
-                  className="eclipse-mobile-card eclipse-mobile-card-9"
-                  style={{
-                    position: 'absolute',
-                    top: '1352px',
-                    left: '0px',
-                    width: '368px',
-                    height: '183px',
-                    borderRadius: '16px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '1.25rem',
-                    color: '#fff',
-                    fontWeight: 600
-                  }}
-                >
-                  Card 9
-                </div>
 
 
 
@@ -219,7 +56,7 @@ export default function Home() {
                 src="/assets/tablet-folder-card.png" 
                 alt="About Me Folder Card Tablet" 
                 className="folder-tablet"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px', display: 'block', display: 'none' }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px', display: 'none' }}
                 /* Tablet only: override with media query */
               />
               {/* Mobile Folder Image - hidden on desktop/tablet, visible on mobile only */}
@@ -1013,9 +850,7 @@ export default function Home() {
                   fontSize: '0.875rem',
                   lineHeight: '1.25rem',
                   zIndex: 2,
-                  boxShadow: '0 1px 4px 0 rgba(31,38,135,0.08)',
-                  WebkitFontWeight: '400 !important',
-                  fontWeight: '400 !important'
+                  boxShadow: '0 1px 4px 0 rgba(31,38,135,0.08)'
                 }}
               >
                 Brand Identity Design
@@ -1036,9 +871,7 @@ export default function Home() {
                   fontSize: '0.875rem',
                   lineHeight: '1.25rem',
                   zIndex: 2,
-                  boxShadow: '0 1px 4px 0 rgba(31,38,135,0.08)',
-                  WebkitFontWeight: '400 !important',
-                  fontWeight: '400 !important'
+                  boxShadow: '0 1px 4px 0 rgba(31,38,135,0.08)'
                 }}
               >
                 2025-2026
@@ -1139,7 +972,7 @@ export default function Home() {
             </div>
 
             {/* Row 2 */}
-            <div style={{ position: 'absolute', top: 234, left: 0, width: '341px', height: '224px', background: '#FCF9F2', border: '2px solid #E6E5E1', borderRadius: '18px', position: 'absolute' }} className="eclipse-lightmode-card eclipse-desktop">
+            <div style={{ position: 'absolute', top: 234, left: 0, width: '341px', height: '224px', background: '#FCF9F2', border: '2px solid #E6E5E1', borderRadius: '18px' }} className="eclipse-lightmode-card eclipse-desktop">
                             <img
                               src="/assets/light-cta-button.svg"
                               alt="Light CTA Button"
@@ -1286,7 +1119,7 @@ export default function Home() {
             </div>
 
             {/* Row 3 - middle bottom card */}
-            <div style={{ position: 'absolute', top: 468, left: 351, width: '458px', height: '710px', background: '#060522', border: 'none', borderRadius: '18px', position: 'absolute' }} className="eclipse-bottomlarge-card eclipse-desktop">
+            <div style={{ position: 'absolute', top: 468, left: 351, width: '458px', height: '710px', background: '#060522', border: 'none', borderRadius: '18px' }} className="eclipse-bottomlarge-card eclipse-desktop">
                                                                     <img
                                                                       src="/assets/eclipse-sticker-3.svg"
                                                                       alt="Eclipse Sticker 3"

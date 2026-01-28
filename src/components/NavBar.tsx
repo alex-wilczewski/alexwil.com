@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 
 const NAV_ITEMS = [
   { label: 'About me', href: '#about-me' },
@@ -8,53 +8,40 @@ const NAV_ITEMS = [
 ];
 
 export default function NavBar() {
-  const navRef = useRef<HTMLDivElement>(null);
-  const [isSticky, setIsSticky] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!navRef.current) return;
-      const { top } = navRef.current.getBoundingClientRect();
-      const nowSticky = top <= 24;
-      if (nowSticky && !isSticky) {
-        setIsSticky(true);
-      } else if (!nowSticky && isSticky) {
-        setIsSticky(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-    // eslint-disable-next-line
-  }, [isSticky]);
 
   return (
     <div
-      ref={navRef}
-      className={`relative transition-all duration-300 mt-6 sticky top-4 z-50 flex justify-center gap-2 nav-width-responsive ${isSticky ? 'nav-glassy-rounded' : 'nav-plain'}`}
+      className="relative mt-6 sticky top-4 z-50 flex justify-center gap-2 nav-width-responsive nav-plain"
     >
       {NAV_ITEMS.map((item) => (
-        item.isComingSoon ? (
-          <a
-            key={item.label}
-            href={item.href}
-            className="px-2 py-1 text-xs font-bold hover:bg-neutral-100 transition-colors font-zalando nav-link-hover tracking-wide"
-            style={{ fontFamily: 'Zalando Sans Expanded, sans-serif', fontWeight: 800, letterSpacing: '0.01em', color: '#1A1813' }}
-          >
-            {item.label}
-          </a>
-        ) : (
-          <a
-            key={item.label}
-            href={item.href}
-            className="px-2 py-1 text-xs font-medium hover:bg-neutral-100 transition-colors font-zalando nav-link-hover"
-            style={{ color: '#1A1813' }}
-          >
-            {item.label}
-          </a>
-        )
+        <a
+          key={item.label}
+          href={item.href}
+          className={
+            `px-2 py-1 text-xs font-zalando nav-link-hover tracking-wide nav-breathing-hover` +
+            (item.isComingSoon ? ' font-bold' : ' font-medium')
+          }
+          style={{
+            fontFamily: item.isComingSoon ? 'Zalando Sans Expanded, sans-serif' : undefined,
+            fontWeight: item.isComingSoon ? 800 : undefined,
+            letterSpacing: '0.01em',
+            color: '#1A1813',
+          }}
+        >
+          {Array.from(item.label).map((char, i) => (
+            <span
+              key={i}
+              className="nav-breathing-letter"
+              style={{
+                display: 'inline-block',
+                animationDelay: `calc(var(--nav-breathing-hover, 0) * ${i * 0.08}s)`
+              }}
+            >
+              {char === ' ' ? '\u00A0' : char}
+            </span>
+          ))}
+        </a>
       ))}
     </div>
   );

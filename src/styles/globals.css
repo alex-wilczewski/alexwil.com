@@ -1,3 +1,108 @@
+@media (min-width: 1200px) {
+  .eclipse-nighthorizon-card.eclipse-desktop {
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #E6E5E1 !important;
+  }
+}
+@media (min-width: 1200px) {
+  .eclipse-favicon-card.eclipse-desktop {
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #E6E5E1 !important;
+  }
+}
+/* Desktop-only override for CTA bubble animation (fixes hover for light-cta-button.svg and dark-cta-button.svg) */
+@media (min-width: 1200px) {
+  .eclipse-lightmode-card .cta-bubble-anim,
+  .eclipse-darkmode-card .cta-bubble-anim {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+    transition: transform 0.5s cubic-bezier(0.4,0,0.2,1) !important;
+    will-change: transform;
+    z-index: 2;
+  }
+  .eclipse-lightmode-card .cta-bubble-anim:hover,
+  .eclipse-darkmode-card .cta-bubble-anim:hover {
+    transform: translate(-50%, -50%) scale(1.09) !important;
+  }
+}
+/*
+  Force nav-link-hover to override Tailwind px-4 and py-2 classes (8px/4px) with 10px/5px using maximum specificity and !important.
+*/
+nav .nav-link-hover,
+.nav-glassy-rounded .nav-link-hover,
+.nav-sticky-transition .nav-link-hover,
+.nav-sticky-final .nav-link-hover,
+.nav-link-hover {
+  padding: 5px 10px !important;
+}
+/* Force nav-link-hover padding to override sticky and legacy nav styles */
+nav .nav-link-hover,
+.nav-glassy-rounded .nav-link-hover,
+.nav-sticky-transition .nav-link-hover,
+.nav-sticky-final .nav-link-hover {
+  padding: 5px 10px !important;
+}
+@media (min-width: 1200px) {
+  .eclipse-lightmode-card .cta-bubble-anim,
+  .eclipse-darkmode-card .cta-bubble-anim,
+  .eclipse-bottomlarge-card .cta-bubble-anim,
+  .eclipse-bottomright-card .cta-bubble-anim {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+    transition: transform 0.5s cubic-bezier(0.4,0,0.2,1) !important;
+    will-change: transform;
+    z-index: 2;
+  }
+  .eclipse-lightmode-card .cta-bubble-anim:hover,
+  .eclipse-darkmode-card .cta-bubble-anim:hover,
+  .eclipse-bottomlarge-card .cta-bubble-anim:hover,
+  .eclipse-bottomright-card .cta-bubble-anim:hover {
+    transform: translate(-50%, -50%) scale(1.09) !important;
+  }
+}
+/* Bubble scale animation for CTA buttons - maximum specificity and !important for desktop */
+.eclipse-lightmode-card .cta-bubble-anim,
+.eclipse-darkmode-card .cta-bubble-anim,
+.eclipse-bottomlarge-card .cta-bubble-anim,
+.eclipse-bottomright-card .cta-bubble-anim,
+.cta-bubble-anim {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) scale(1) !important;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1) !important;
+}
+.eclipse-lightmode-card .cta-bubble-anim:hover,
+.eclipse-darkmode-card .cta-bubble-anim:hover,
+.eclipse-bottomlarge-card .cta-bubble-anim:hover,
+.eclipse-bottomright-card .cta-bubble-anim:hover,
+.cta-bubble-anim:hover {
+  transform: translate(-50%, -50%) scale(1.09) !important;
+}
+/* Nav breathing wave effect for each letter on hover */
+.nav-breathing-letter {
+  transition: transform 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+.nav-breathing-hover:hover .nav-breathing-letter {
+  animation: eclipse-breathing-wave 1.6s cubic-bezier(0.4,0,0.2,1) infinite;
+  will-change: transform;
+  --nav-breathing-hover: 1;
+}
+/* Nav breathing hover effect, matches eclipse-breathing-letter but only on hover */
+.nav-breathing-hover {
+  transition: transform 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+.nav-breathing-hover:hover {
+  animation: eclipse-breathing-wave 1.6s cubic-bezier(0.4,0,0.2,1);
+  animation-iteration-count: 1;
+  will-change: transform;
+}
 /* Strictly show .eclipse-tablet-grid only at the tablet breakpoint (800px-1199px) */
 .eclipse-tablet-grid {
   display: none !important;
@@ -287,9 +392,12 @@ footer {
   display: inline-block;
 }
 /* Nav link hover: less rounded */
+/* Increased nav button padding: 10px horizontal, 5px vertical */
+/* Increased nav button padding: 10px horizontal, 5px vertical, with !important for override */
 .nav-link-hover {
   border-radius: 9px;
   transition: border-radius 0.2s, background 0.2s;
+  padding: 5px 10px !important;
 }
 .nav-link-hover:hover {
   background: #e5e7eb !important; /* Tailwind's neutral-200 for higher contrast */

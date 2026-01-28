@@ -30,7 +30,9 @@ export default function Home() {
       </section>
 
       {/* Navigation */}
-      <NavBar />
+      <div style={{ position: 'sticky', top: 0, zIndex: 50, background: '#fafaf8' }}>
+        <NavBar />
+      </div>
 
       {/* Main Grid Container - fixed width, centered */}
       <div className="w-full">
@@ -281,7 +283,7 @@ export default function Home() {
           <div className="eclipse-grid" style={{ position: 'relative', width: '1160px', height: 'auto', minHeight: '1394px', margin: '0 auto' }}>
             {/* Mobile breakpoint grid (visible <=799px) - pixel perfect layout */}
             <div className="block max-[799px]:block min-[800px]:hidden">
-              <div className="eclipse-mobile-grid mobile-bento-align" style={{ position: 'relative', height: '1537px', transform: 'translateX(-2.85%)', left: '30%' }}>
+              <div className="eclipse-mobile-grid mobile-bento-align" style={{ position: 'relative', height: '1537px', transform: 'translateX(-2.85%)' }}>
                 {/* Card 1: Top left, 268x184 */}
                 <div
                   className="eclipse-mobile-card eclipse-mobile-card-1"
@@ -607,6 +609,7 @@ export default function Home() {
                     justifyContent: 'center',
                     fontSize: '1.25rem',
                     color: '#fff',
+                    overflow: 'hidden',
                     fontWeight: 600
                   }}
                 >
@@ -623,8 +626,6 @@ export default function Home() {
                       height: 'fit-content',
                       objectFit: 'contain',
                       display: 'block',
-                      overflow: 'hidden',
-                      borderRadius: '16px',
                     }}
                   />
                   {/* Ios Mockup label */}
@@ -765,11 +766,11 @@ export default function Home() {
                   <img
                     src="/assets/light-cta-button.svg"
                     alt="Light CTA Button"
+                    className="cta-bubble-anim"
                     style={{
                       position: 'absolute',
                       top: '50%',
                       left: '50%',
-                      transform: 'translate(-50%, -50%)',
                       width: 'fit-content',
                       height: 'fit-content',
                       objectFit: 'contain',
@@ -822,11 +823,11 @@ export default function Home() {
                   <img
                     src="/assets/dark-cta-button.svg"
                     alt="Dark CTA Button"
+                    className="cta-bubble-anim"
                     style={{
                       position: 'absolute',
                       top: '50%',
                       left: '50%',
-                      transform: 'translate(-50%, -50%)',
                       width: 'fit-content',
                       height: 'fit-content',
                       objectFit: 'contain',
@@ -1051,11 +1052,11 @@ export default function Home() {
                   <img
                     src="/assets/light-cta-button.svg"
                     alt="Light CTA Button"
+                    className="cta-bubble-anim"
                     style={{
                       position: 'absolute',
                       top: '50%',
                       left: '50%',
-                      transform: 'translate(-50%, -50%)',
                       width: 'fit-content',
                       height: 'fit-content',
                       objectFit: 'contain',
@@ -1127,11 +1128,11 @@ export default function Home() {
                   <img
                     src="/assets/dark-cta-button.svg"
                     alt="Dark CTA Button"
+                    className="cta-bubble-anim"
                     style={{
                       position: 'absolute',
                       top: '50%',
                       left: '50%',
-                      transform: 'translate(-50%, -50%)',
                       width: 'fit-content',
                       height: 'fit-content',
                       objectFit: 'contain',
@@ -1335,8 +1336,8 @@ export default function Home() {
                                 right: '12px',
                                 borderRadius: '11px',
                                 padding: '5px 10px',
-                                background: '#e7fe96',
-                                color: '#1a1813',
+                                background: '#211adb',
+                                color: '#FFFFFF',
                                 fontFamily: 'Zalando Sans Expanded, sans-serif',
                                 fontWeight: 400,
                                 fontSize: '0.875rem',
@@ -1357,7 +1358,7 @@ export default function Home() {
                   right: '12px',
                   borderRadius: '11px',
                   padding: '5px 10px',
-                  background: '#211ADB',
+                  background: '#4d48e2',
                   color: '#FFFFFF',
                   fontFamily: 'Zalando Sans Expanded, sans-serif',
                   fontWeight: 400,
@@ -1378,8 +1379,8 @@ export default function Home() {
                   right: '12px',
                   borderRadius: '11px',
                   padding: '5px 10px',
-                  background: '#4d48e2',
-                  color: '#FFFFFF',
+                  background: '#E7FE96',
+                  color: '#1a1813',
                   fontFamily: 'Zalando Sans Expanded, sans-serif',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -1391,9 +1392,9 @@ export default function Home() {
               >
                 2025-2026
               </span>
-              <img src="/assets/desktop-folder-card.png" alt="Folder Card" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '18px' }} />
+              <img src="/assets/desktop-folder-card.png" alt="Folder Card" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px' }} />
             </div>
-            <div style={{ position: 'absolute', top: 0, left: 351, width: '224px', height: '224px', borderRadius: '18px', background: '#E9E9FC' }} className="eclipse-favicon-card eclipse-desktop">
+            <div style={{ position: 'absolute', top: 0, left: 351, width: '224px', height: '224px', borderRadius: '16px' }} className="eclipse-favicon-card eclipse-desktop">
                             <img
                               src="/assets/eclipse-favicon.png"
                               alt="Eclipse Favicon"
@@ -1424,7 +1425,7 @@ export default function Home() {
               </span>
             {/* Card content goes here */}
             </div>
-            <div style={{ position: 'absolute', top: 0, left: 585, width: '224px', height: '224px', border: '2px solid #E6E5E1', borderRadius: '18px' }} className="eclipse-color-card eclipse-desktop">
+            <div style={{ background: '#FCF9F2',position: 'absolute', top: 0, left: 585, width: '224px', height: '224px', border: '1px solid #E6E5E1', borderRadius: '16px' }} className="eclipse-color-card eclipse-desktop">
                             <img
                               src="/assets/color-sheet-preview.svg"
                               alt="Color Sheet Preview"
@@ -1459,7 +1460,7 @@ export default function Home() {
                 Brand Color Sheet
               </a>
             </div>
-            <div style={{ position: 'absolute', top: 0, left: 819, width: '341px', height: '458px', borderRadius: '18px', overflow: 'hidden', border: 'none', outline: 'none' }} className="eclipse-large-top-card eclipse-desktop">
+            <div style={{ position: 'absolute', top: 0, left: 819, width: '341px', height: '458px', borderRadius: '16px', overflow: 'hidden', border: 'none', outline: 'none' }} className="eclipse-large-top-card eclipse-desktop">
                             <span
                               style={{
                                 position: 'absolute',
@@ -1487,10 +1488,11 @@ export default function Home() {
             </div>
 
             {/* Row 2 */}
-            <div style={{ position: 'absolute', top: 234, left: 0, width: '341px', height: '224px', background: '#FCF9F2', border: '2px solid #E6E5E1', borderRadius: '18px' }} className="eclipse-lightmode-card eclipse-desktop">
+            <div style={{ position: 'absolute', top: 234, left: 0, width: '341px', height: '224px', background: '#FCF9F2', border: '1px solid #E6E5E1', borderRadius: '16px' }} className="eclipse-lightmode-card eclipse-desktop">
                             <img
                               src="/assets/light-cta-button.svg"
                               alt="Light CTA Button"
+                              className="cta-bubble-anim"
                               style={{
                                 position: 'absolute',
                                 top: '50%',
@@ -1514,7 +1516,7 @@ export default function Home() {
                 CTA button light mode
               </span>
             </div>
-            <div style={{ position: 'absolute', top: 234, left: 351, width: '224px', height: '224px', background: '#FCF9F2', border: '2px solid #E5E5E5', borderRadius: '18px' }} className="eclipse-nighthorizon-card eclipse-desktop">
+            <div style={{ position: 'absolute', top: 234, left: 351, width: '224px', height: '224px', background: '#FCF9F2', border: '2px solid #E5E5E5', borderRadius: '16px' }} className="eclipse-nighthorizon-card eclipse-desktop">
                             <img
                               src="/assets/night-horizon-graphic.png"
                               alt="Night Horizon Graphic"
@@ -1523,8 +1525,8 @@ export default function Home() {
                                 top: '50%',
                                 left: '50%',
                                 transform: 'translate(-50%, -50%)',
-                                width: '112px',
-                                height: '112px',
+                                width: '100px',
+                                height: '100px',
                                 objectFit: 'contain',
                                 display: 'block'
                               }}
@@ -1544,7 +1546,7 @@ export default function Home() {
                 Night Horizon Graphic
               </span>
             </div>
-            <div style={{ position: 'absolute', top: 234, left: 585, width: '224px', height: '224px', background: '#211ADB', border: 'none', borderRadius: '18px' }} className="eclipse-bluebox-card eclipse-desktop">
+            <div style={{ position: 'absolute', top: 234, left: 585, width: '224px', height: '224px', background: '#211ADB', border: 'none', borderRadius: '16px' }} className="eclipse-bluebox-card eclipse-desktop">
               <img
                 src="/assets/combination-mark-white.svg"
                 alt="Combination Mark White"
@@ -1573,7 +1575,7 @@ export default function Home() {
             </div>
 
             {/* Row 3 - new middle left card */}
-            <div style={{ position: 'absolute', top: 468, left: 0, width: '341px', height: '224px', background: '#060522', border: 'none', borderRadius: '18px' }} className="eclipse-middleleft-card eclipse-desktop">
+            <div style={{ position: 'absolute', top: 468, left: 0, width: '341px', height: '224px', background: '#060522', border: 'none', borderRadius: '16px' }} className="eclipse-middleleft-card eclipse-desktop">
                             <span
                               style={{
                                 position: 'absolute',
@@ -1591,6 +1593,7 @@ export default function Home() {
               <img
                 src="/assets/dark-cta-button.svg"
                 alt="Dark CTA Button"
+                className="cta-bubble-anim"
                 style={{
                   position: 'absolute',
                   top: '50%',
@@ -1602,7 +1605,7 @@ export default function Home() {
             </div>
 
             {/* Row 3 - bottom right long card */}
-            <div style={{ position: 'absolute', top: 468, left: 819, width: '341px', height: '710px', border: 'none', borderRadius: '18px' }} className="eclipse-bottomright-card eclipse-desktop">
+            <div style={{ position: 'absolute', top: 468, left: 819, width: '341px', height: '710px', border: 'none', borderRadius: '16px' }} className="eclipse-bottomright-card eclipse-desktop">
                             <img
                               src="/assets/eclipse-business-cards.png"
                               alt="Eclipse Business Cards"
@@ -1614,7 +1617,7 @@ export default function Home() {
                                 height: '100%',
                                 objectFit: 'cover',
                                 display: 'block',
-                                borderRadius: '18px'
+                                borderRadius: '16px'
                               }}
                             />
               <span
@@ -1634,7 +1637,7 @@ export default function Home() {
             </div>
 
             {/* Row 3 - middle bottom card */}
-            <div style={{ position: 'absolute', top: 468, left: 351, width: '458px', height: '710px', background: '#060522', border: 'none', borderRadius: '18px' }} className="eclipse-bottomlarge-card eclipse-desktop">
+            <div style={{ position: 'absolute', top: 468, left: 351, width: '458px', height: '710px', background: '#060522', border: 'none', borderRadius: '16px' }} className="eclipse-bottomlarge-card eclipse-desktop">
                                                                     <img
                                                                       src="/assets/eclipse-sticker-3.svg"
                                                                       alt="Eclipse Sticker 3"
@@ -1692,7 +1695,7 @@ export default function Home() {
             </div>
 
             {/* Row 5 - bottom left card, positioned at bottom left */}
-            <div style={{ position: 'absolute', top: 702, left: 0, width: '341px', height: '476px', background: '#FCF9F2', border: '2px solid #E6E5E1', borderRadius: '18px' }} className="eclipse-darkmode-card eclipse-desktop">
+            <div style={{ position: 'absolute', top: 702, left: 0, width: '341px', height: '476px', background: '#FCF9F2', border: '1px solid #E6E5E1', borderRadius: '16px' }} className="eclipse-darkmode-card eclipse-desktop">
                             <span
                               style={{
                                 position: 'absolute',
@@ -1718,7 +1721,7 @@ export default function Home() {
                   height: '100%',
                   objectFit: 'cover',
                   display: 'block',
-                  borderRadius: '18px'
+                  borderRadius: '16px'
                 }}
               />
             </div>
